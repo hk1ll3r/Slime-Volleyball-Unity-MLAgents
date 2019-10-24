@@ -1,0 +1,817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{C108C00C-5084-8DB3-8146-6A208C9E2300}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_0;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_LINUX;PLATFORM_STANDALONE;UNITY_STANDALONE_LINUX;UNITY_STANDALONE;UNITY_STANDALONE_LINUX_API;PLAYERPREFS_SERIALIZE_TO_XML;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_SPATIALTRACKING;ENABLE_MODULAR_UNITYENGINE_ASSEMBLIES;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_LINUX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <ItemGroup>     <Compile Include="Assets\AI\SlimeAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DDecision.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DHardAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Basic\Scripts\BasicAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Basic\Scripts\BasicAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Basic\Scripts\BasicDecision.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Bouncer\Scripts\BouncerAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Bouncer\Scripts\BouncerAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Bouncer\Scripts\BouncerTarget.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Crawler\Scripts\CrawlerAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Crawler\Scripts\CrawlerAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\FoodCollector\Scripts\FoodCollectorAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\FoodCollector\Scripts\FoodCollectorAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\FoodCollector\Scripts\FoodCollectorArea.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\FoodCollector\Scripts\FoodLogic.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\GridWorld\Scripts\GridAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\GridWorld\Scripts\GridAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Hallway\Scripts\HallwayAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Hallway\Scripts\HallwayAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\PushBlock\Scripts\GoalDetect.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\PushBlock\Scripts\PushAgentBasic.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\PushBlock\Scripts\PushBlockAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Pyramids\Scripts\PyramidAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Pyramids\Scripts\PyramidAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Pyramids\Scripts\PyramidArea.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Pyramids\Scripts\PyramidSwitch.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Reacher\Scripts\ReacherAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Reacher\Scripts\ReacherAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Reacher\Scripts\ReacherDecision.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Reacher\Scripts\ReacherGoal.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\AdjustTrainingTimescale.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\Area.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\FlyCamera.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\GroundContact.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\JointDriveController.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RandomDecision.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception2D.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception3D.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\TargetContact.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Soccer\Scripts\AgentSoccer.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Soccer\Scripts\SoccerAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Soccer\Scripts\SoccerBallController.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Soccer\Scripts\SoccerFieldArea.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Template\Scripts\TemplateAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Template\Scripts\TemplateAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Template\Scripts\TemplateDecision.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Tennis\Scripts\HitWall.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Tennis\Scripts\TennisAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Tennis\Scripts\TennisAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Tennis\Scripts\TennisArea.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Walker\Scripts\WalkerAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\Walker\Scripts\WalkerAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\WallJump\Scripts\WallJumpAcademy.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\WallJump\Scripts\WallJumpAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Academy.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\ActionMasker.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Agent.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Batcher.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\BCTeacherHelper.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Brain.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\BrainParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\BroadcastHub.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\AgentActionProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\AgentInfoProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\BrainParametersProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CommandProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomAction.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomObservation.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomResetParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\DemonstrationMetaProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\EngineConfigurationProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\EnvironmentParametersProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\Header.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\ResolutionProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\SpaceTypeProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityInput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityMessage.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityOutput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlInitializationInput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlInitializationOutput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlInput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlOutput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityToExternal.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityToExternalGrpc.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Decision.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Demonstration.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\DemonstrationRecorder.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\DemonstrationStore.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\HeuristicBrain.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\ICommunicator.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\ApplierImpl.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\BarracudaModelParamLoader.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\GeneratorImpl.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorApplier.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorGenerator.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorNames.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorProxy.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\Utils\Multinomial.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\Utils\RandomNormal.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\LearningBrain.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Monitor.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\PlayerBrain.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\ResetParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\RpcCommunicator.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\SocketCommunicator.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Startup.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Utilities.cs" />
+     <Compile Include="Assets\Scripts\BallController.cs" />
+     <Compile Include="Assets\Scripts\CameraSize.cs" />
+     <Compile Include="Assets\Scripts\Events.cs" />
+     <Compile Include="Assets\Scripts\EyeMovement.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\GameManagerAgents.cs" />
+     <Compile Include="Assets\Scripts\InputMapper.cs" />
+     <Compile Include="Assets\Scripts\RoundOutcome.cs" />
+     <Compile Include="Assets\Scripts\ScoreboardController.cs" />
+     <Compile Include="Assets\Scripts\ScoreRingController.cs" />
+     <Compile Include="Assets\Scripts\SlimeAgent.cs" />
+     <Compile Include="Assets\Scripts\SlimeColliderGenerator.cs" />
+     <Compile Include="Assets\Scripts\SlimeController.cs" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Experimental.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Conv.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Random.cginc" />
+     <None Include="Assets\ML-Agents\Examples\SharedAssets\Materials\ShaderRadialGrid.shader" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\BarracudaReferenceImpl.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Activation.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Broadcast.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\DenseFP16.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\TexConv.compute" />
+     <None Include="Assets\ML-Agents\Examples\SharedAssets\Materials\GridPatternShader.shader" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\ConvOld.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Tensor.cginc" />
+     <None Include="Assets\ML-Agents\Examples\SharedAssets\Materials\ShaderOutline.shader" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\FastNV.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Dense.compute" />
+     <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Generic.compute" />
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ugui">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.ugui.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VisualStudio.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ugui.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/ScriptAssemblies/Unity.ugui.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AndroidJNIModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FileSystemHttpModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputLegacyModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.LocalizationModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ProfilerModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StreamingModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextCoreModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityTestProtocolModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VFXModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Abstractions">
+ <HintPath>/home/hossein/workspace/unity/Slime/Assets/ML-Agents/Plugins/System.IO.Abstractions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Abstractions.TestingHelpers">
+ <HintPath>/home/hossein/workspace/unity/Slime/Assets/ML-Agents/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Barracuda">
+ <HintPath>/home/hossein/workspace/unity/Slime/Assets/ML-Agents/Plugins/Barracuda.Core/Barracuda/Barracuda.dll</HintPath>
+ </Reference>
+ <Reference Include="Grpc.Core">
+ <HintPath>/home/hossein/workspace/unity/Slime/Assets/ML-Agents/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Interactive.Async">
+ <HintPath>/home/hossein/workspace/unity/Slime/Assets/ML-Agents/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Protobuf">
+ <HintPath>/home/hossein/workspace/unity/Slime/Assets/ML-Agents/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>/home/hossein/workspace/unity/Slime/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Numerics.Vectors">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CSharp">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Win32.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.AppContext">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.Concurrent">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.NonGeneric">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections.Specialized">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Collections">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.Annotations">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.EventBasedAsync">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel.TypeConverter">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ComponentModel">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Console">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Data.Common">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Contracts">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Debug">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.FileVersionInfo">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Process">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.StackTrace">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.TextWriterTraceListener">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.Tools">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Diagnostics.TraceSource">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Drawing.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Dynamic.Runtime">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Calendars">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization.Extensions">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Globalization">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Compression.ZipFile">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.DriveInfo">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem.Watcher">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.FileSystem">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.IsolatedStorage">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.MemoryMappedFiles">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.Pipes">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO.UnmanagedMemoryStream">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+ </Reference>
+ <Reference Include="System.IO">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Expressions">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Parallel">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq.Queryable">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Linq">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http.Rtc">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.NameResolution">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.NetworkInformation">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Ping">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Requests">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Security">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Sockets">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebHeaderCollection">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebSockets.Client">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.WebSockets">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ObjectModel">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Emit.ILGeneration">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Emit.Lightweight">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Emit">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Extensions">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.Reader">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.ResourceManager">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Resources.Writer">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.CompilerServices.VisualC">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Extensions">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Handles">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.InteropServices">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Numerics">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Formatters">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Json">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization.Xml">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Claims">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Algorithms">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Csp">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Encoding">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Cryptography.X509Certificates">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.Principal">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Security.SecureString">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Duplex">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Http">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.NetTcp">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Primitives">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ServiceModel.Security">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding.Extensions">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.Encoding">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Text.RegularExpressions">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Overlapped">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks.Parallel">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Thread">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.ThreadPool">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Timer">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+ </Reference>
+ <Reference Include="System.ValueTuple">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.ReaderWriter">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XDocument">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath.XDocument">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XPath">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XmlDocument">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.XmlSerializer">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+ </Reference>
+ <Reference Include="netstandard">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript.Lang">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="Boo.Lang">
+ <HintPath>/home/hossein/Unity/Hub/Editor/2019.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MacBLAS.csproj">
+      <Project>{F9A2A4DF-A3EB-1523-E217-A182788A51EF}</Project>
+      <Name>MacBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Barracuda-editor.csproj">
+      <Project>{6ED814B2-9F06-FE12-DE46-8F30EA7B283D}</Project>
+      <Name>Barracuda-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="iOSBLAS.csproj">
+      <Project>{EF4EA40F-CF11-F5D6-CE89-BD95118BDE56}</Project>
+      <Name>iOSBLAS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
