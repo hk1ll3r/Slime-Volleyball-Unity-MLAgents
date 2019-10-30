@@ -26,10 +26,10 @@ MonoBehaviour:
   discretePlayerActions:
   - key: 276
     branchIndex: 0
-    value: 1
+    value: 2
   - key: 275
     branchIndex: 0
-    value: 2
+    value: 1
   - key: 273
     branchIndex: 1
     value: 1

@@ -15,6 +15,7 @@ public class SlimeAgent : Agent
     Rigidbody2D ball;
     Rigidbody2D otherSlime;
     Rigidbody2D meSlime;
+    private float mMaxX, mMaxY, mMaxVX, mMaxVY;
 
     private bool mGrounded;            // Whether or not the player is grounded.
 
@@ -27,15 +28,31 @@ public class SlimeAgent : Agent
         ball = transform.parent.Find("ball").GetComponent<Rigidbody2D>();
 
         ground = transform.parent.Find("ground").GetComponent<Rigidbody2D>();
+        Vector2 groundSize = ground.GetComponent<BoxCollider2D>().size;
+        mMaxX = groundSize.x / 2;
+        mMaxY = groundSize.x / 2 - groundSize.y;
+        mMaxVX = BallController.MaxV.x;
+        mMaxVY = mJumpSpeed;
+        //Debug.LogFormat("limits: x:{0} y:{1} vx:{2} vy:{3}", mMaxX, mMaxY, mMaxVX, mMaxVY);
+
         gameManager = transform.parent.GetComponent<GameManagerAgents>();
         
         move = jump = 0;
+        
     }
 
     int[] movemap = new int[] {0, -1, 1};
     
+    /* 
+     *  move  
+     *  0: stay
+     *  1: outwards
+     *  2: inwards
+     */
     public void SetAction(int move, int jump) {
         this.move = movemap[move]; // move [0-2] => [-1,1]
+        bool invertX = (player == 2);
+        if (invertX) this.move *= -1;
         this.jump = jump; // jump [0,1]
     }
 
@@ -44,7 +61,22 @@ public class SlimeAgent : Agent
         set { meSlime.position = value + ground.position; }
     }
 
-    private Vector2 RefGround(Vector2 v) {
+    private Vector2 RefGround(Vector2 p) {
+        return NormalizeVec2(p - ground.position, mMaxX, mMaxY);
+    }
+
+    private Vector2 NormalizeVelocity(Vector2 v)
+    {
+        return NormalizeVec2(v, mMaxVX, mMaxVY);
+    }
+
+    private Vector2 NormalizeVec2(Vector2 v, float maxX, float maxY)
+    {
+        return new Vector2(v.x / maxX, v.y / maxY);
+    }
+
+    private Vector2 RefGroundRaw(Vector2 v)
+    {
         return v - ground.position;
     }
 
@@ -91,8 +123,8 @@ public class SlimeAgent : Agent
         // Debug.LogFormat("Agent {0} reset", player);
     }
 
-    private Vector2 InvertX(Vector2 groundVec) {
-        return new Vector2(-groundVec.x, groundVec.y);
+    private Vector2 InvertX(Vector2 v) {
+        return new Vector2(-v.x, v.y);
     }
 
     // convert the observation to have the agent on the left always
@@ -101,11 +133,50 @@ public class SlimeAgent : Agent
         bool invertX = (player == 2);
 
         if (invertX) {
-            if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
+            /*if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
                 player,
                 InvertX(groundPosition),
                 InvertX(RefGround(otherSlime.position)), 
-                InvertX(RefGround(ball.position))); 
+                InvertX(RefGround(ball.position))); */
+            // positions
+            AddVectorObs(InvertX(RefGround(meSlime.position)));
+            AddVectorObs(InvertX(RefGround(otherSlime.position)));
+            AddVectorObs(InvertX(RefGround(ball.position)));
+
+            // velocity
+            AddVectorObs(InvertX(NormalizeVelocity(meSlime.velocity)));
+            AddVectorObs(InvertX(NormalizeVelocity(otherSlime.velocity)));
+            AddVectorObs(InvertX(NormalizeVelocity(ball.velocity)));
+        } else {
+            /*if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
+                player,
+                groundPosition, 
+                RefGround(otherSlime.position), 
+                RefGround(ball.position)); */
+            // positions
+            AddVectorObs(RefGround(meSlime.position));
+            AddVectorObs(RefGround(otherSlime.position));
+            AddVectorObs(RefGround(ball.position));
+
+            // velocity
+            AddVectorObs(NormalizeVelocity(meSlime.velocity));
+            AddVectorObs(NormalizeVelocity(otherSlime.velocity));
+            AddVectorObs(NormalizeVelocity(ball.velocity));
+        }
+        
+    }
+
+    public void CollectObservationsRaw()
+    {
+        bool invertX = (player == 2);
+
+        if (invertX)
+        {
+            /*if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
+                player,
+                InvertX(groundPosition),
+                InvertX(RefGround(otherSlime.position)), 
+                InvertX(RefGround(ball.position))); */
             // positions
             AddVectorObs(InvertX(groundPosition));
             AddVectorObs(InvertX(RefGround(otherSlime.position)));
@@ -115,12 +186,14 @@ public class SlimeAgent : Agent
             AddVectorObs(InvertX(meSlime.velocity));
             AddVectorObs(InvertX(otherSlime.velocity));
             AddVectorObs(InvertX(ball.velocity));
-        } else {
-            if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
+        }
+        else
+        {
+            /*if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
                 player,
                 groundPosition, 
                 RefGround(otherSlime.position), 
-                RefGround(ball.position)); 
+                RefGround(ball.position)); */
             // positions
             AddVectorObs(groundPosition);
             AddVectorObs(RefGround(otherSlime.position));
@@ -131,7 +204,7 @@ public class SlimeAgent : Agent
             AddVectorObs(otherSlime.velocity);
             AddVectorObs(ball.velocity);
         }
-        
+
     }
 
     // vectorAction size 1 for discrete actions?

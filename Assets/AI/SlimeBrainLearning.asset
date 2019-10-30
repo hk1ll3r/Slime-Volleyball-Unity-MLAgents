@@ -21,5 +21,5 @@ MonoBehaviour:
     - Horizontal
     - Jump
     vectorActionSpaceType: 0
-  model: {fileID: 5022602860645237092, guid: 930e3214d07f4db86af7021bec98ec0a, type: 3}
+  model: {fileID: 5022602860645237092, guid: 8199b4e9df232944994d8c47415fb13f, type: 3}
   inferenceDevice: 0

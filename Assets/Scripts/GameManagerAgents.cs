@@ -4,7 +4,9 @@ using UnityEngine.Events;
 using MLAgents;
 public class GameManagerAgents : MonoBehaviour {
 
-    [SerializeField] private int gameID; // to track multiple games in the same environment
+    [SerializeField] private int gameID; // to track multiple games in the same scene
+    [SerializeField] private float roundTimeLimit; // round ends with no rewards if this time limit reaches 
+
     public int GameID {
         get { return gameID; }
     }
@@ -16,6 +18,8 @@ public class GameManagerAgents : MonoBehaviour {
     Transform slime2;
     Transform ground;
 
+    private float roundStartTime;
+
     void Awake() {
         ground = transform.Find("ground");
         ball = transform.Find("ball");
@@ -23,12 +27,32 @@ public class GameManagerAgents : MonoBehaviour {
         slime2 = transform.Find("slimeAI2");
     }
 
+    private void FixedUpdate()
+    {
+        if (Time.fixedTime >= roundStartTime + roundTimeLimit)
+        {
+            OnRoundEnd(RoundOutcome.None);
+        }
+    }
+
     public void OnRoundEnd(RoundOutcome outcome) {
         Agent agent1 = slime1.GetComponent<SlimeAgent>();
         Agent agent2 = slime2.GetComponent<SlimeAgent>();
-        float leftReward = (outcome == RoundOutcome.LeftScore) ? 5 : -5;
-        agent1.SetReward(leftReward);
-        agent2.SetReward(-leftReward);
+        float reward1;
+        switch (outcome)
+        {
+            case RoundOutcome.LeftScore:
+                reward1 = 1f;
+                break;
+            case RoundOutcome.RightScore:
+                reward1 = -1f;
+                break;
+            default:
+                reward1 = 0f;
+                break;
+        }
+        agent1.SetReward(reward1);
+        agent2.SetReward(-reward1);
         agent1.Done();
         agent2.Done();
         NewGame();
@@ -48,6 +72,7 @@ public class GameManagerAgents : MonoBehaviour {
         slime2.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         slime2.localPosition = new Vector2(InitialSlimeX, ground.localPosition.y);
         slime2.GetComponent<Rigidbody2D>().position = slime2.position;
+        roundStartTime = Time.fixedTime;
     }
 
 }

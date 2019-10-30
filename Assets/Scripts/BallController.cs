@@ -3,8 +3,14 @@ using UnityEngine.Events;
 
 public class BallController : MonoBehaviour
 {
-    float gMaxVX = 11.25f; // org 15
-    float gMaxVY = 8.25f; // org 11
+    const float gMaxVX = 11.25f; // org 15
+    const float gMaxVY = 8.25f; // org 11
+    
+    public static Vector2 MaxV
+    {
+        get { return new Vector2(gMaxVX, gMaxVY); }
+    }
+
     private Rigidbody2D mRigidbody2D;
     private Transform ground;
     private Transform slime1;
@@ -25,7 +31,6 @@ public class BallController : MonoBehaviour
         //Debug.LogFormat("ball v: {0}", mRigidbody2D.velocity);
         mRigidbody2D.velocity = new Vector2(Mathf.Clamp(mRigidbody2D.velocity.x, -gMaxVX, gMaxVX),
                                             Mathf.Clamp(mRigidbody2D.velocity.y, -gMaxVY, gMaxVY));
-        
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -34,9 +39,9 @@ public class BallController : MonoBehaviour
         if (col.collider.transform == ground) {
             gameManager.OnRoundEnd(transform.localPosition.x > 0 ? RoundOutcome.LeftScore : RoundOutcome.RightScore);
         } else if (col.collider.transform == slime1) {
-            slime1.GetComponent<SlimeAgent>().AddReward(0.05f);
+            slime1.GetComponent<SlimeAgent>().AddReward(0.01f);
         }  else if (col.collider.transform == slime2) {
-            slime2.GetComponent<SlimeAgent>().AddReward(0.05f);
+            slime2.GetComponent<SlimeAgent>().AddReward(0.01f);
         }
     }
 

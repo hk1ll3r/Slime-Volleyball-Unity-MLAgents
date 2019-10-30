@@ -1,4 +1,5 @@
 public enum RoundOutcome {
-    LeftScore = 0,
-    RightScore = 1
+    None = 0,
+    LeftScore = 1,
+    RightScore = 2
 }
