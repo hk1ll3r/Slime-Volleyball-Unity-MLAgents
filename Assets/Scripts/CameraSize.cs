@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CameraSize : MonoBehaviour {
 
     private int width, height;

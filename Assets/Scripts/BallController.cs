@@ -15,7 +15,7 @@ public class BallController : MonoBehaviour
     private Transform ground;
     private Transform slime1;
     private Transform slime2;
-    private GameManagerAgents gameManager;
+    private GameManager gameManager;
 
     private void Awake()
     {
@@ -23,11 +23,12 @@ public class BallController : MonoBehaviour
         ground = transform.parent.Find("ground");
         slime1 = transform.parent.Find("slimeAI1");
         slime2 = transform.parent.Find("slimeAI2");
-        gameManager = transform.parent.GetComponent<GameManagerAgents>();
+        gameManager = transform.parent.GetComponent<GameManager>();
     }
 
     private void FixedUpdate()
     {
+        if (gameManager.IsPhysicsPaused) return;
         //Debug.LogFormat("ball v: {0}", mRigidbody2D.velocity);
         mRigidbody2D.velocity = new Vector2(Mathf.Clamp(mRigidbody2D.velocity.x, -gMaxVX, gMaxVX),
                                             Mathf.Clamp(mRigidbody2D.velocity.y, -gMaxVY, gMaxVY));

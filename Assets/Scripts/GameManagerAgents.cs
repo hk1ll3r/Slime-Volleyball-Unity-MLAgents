@@ -23,8 +23,8 @@ public class GameManagerAgents : MonoBehaviour {
     void Awake() {
         ground = transform.Find("ground");
         ball = transform.Find("ball");
-        slime1 = transform.Find("slimeAI1");
-        slime2 = transform.Find("slimeAI2");
+        slime1 = transform.Find("slime1");
+        slime2 = transform.Find("slime2");
     }
 
     private void FixedUpdate()

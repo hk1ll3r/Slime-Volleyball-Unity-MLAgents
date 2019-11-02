@@ -8,9 +8,9 @@ public class SlimeAgent : Agent
     [SerializeField] private float mSpeed; // org 8
     [SerializeField] private float mXMax;
     [SerializeField] private float mXMin;
-    [SerializeField] private int player;
+    [SerializeField] private Player player;
     [SerializeField] private float gravityMultiplier; // 2.4 for slimes
-    GameManagerAgents gameManager;
+    GameManager gameManager;
     Rigidbody2D ground;
     Rigidbody2D ball;
     Rigidbody2D otherSlime;
@@ -24,7 +24,7 @@ public class SlimeAgent : Agent
     {
         meSlime = GetComponent<Rigidbody2D>();
         
-        otherSlime = transform.parent.Find(string.Format("slimeAI{0}", player == 1 ? 2 : 1)).GetComponent<Rigidbody2D>();
+        otherSlime = transform.parent.Find(string.Format("slime{0}", player == Player.One ? 1 : 2)).GetComponent<Rigidbody2D>();
         ball = transform.parent.Find("ball").GetComponent<Rigidbody2D>();
 
         ground = transform.parent.Find("ground").GetComponent<Rigidbody2D>();
@@ -35,7 +35,7 @@ public class SlimeAgent : Agent
         mMaxVY = mJumpSpeed;
         //Debug.LogFormat("limits: x:{0} y:{1} vx:{2} vy:{3}", mMaxX, mMaxY, mMaxVX, mMaxVY);
 
-        gameManager = transform.parent.GetComponent<GameManagerAgents>();
+        gameManager = transform.parent.GetComponent<GameManager>();
         
         move = jump = 0;
         
@@ -51,7 +51,7 @@ public class SlimeAgent : Agent
      */
     public void SetAction(int move, int jump) {
         this.move = movemap[move]; // move [0-2] => [-1,1]
-        bool invertX = (player == 2);
+        bool invertX = (player == Player.Two);
         if (invertX) this.move *= -1;
         this.jump = jump; // jump [0,1]
     }
@@ -82,13 +82,18 @@ public class SlimeAgent : Agent
 
     private void FixedUpdate()
     {
-        //Debug.LogFormat("Agent {0} fixedupdate", player);
+        if (gameManager.IsPhysicsPaused) return;
+
+        // Debug.LogFormat("ref ground ground {0}", RefGroundRaw(ground.transform.position));
+        
         float vx = move * mSpeed;
         float vy = meSlime.velocity.y + Physics2D.gravity.y * Time.fixedDeltaTime * gravityMultiplier;
 
-        if (groundPosition.y <= 0)
+        Debug.LogFormat("1 Agent {0} y: {1}", player, groundPosition.y);
+
+        if (groundPosition.y <= 0.01f) // TODO properly limit rigidbody's position
         {
-            //Debug.LogFormat("Agent {0} y: {1}", player, groundPosition.y);
+            
             groundPosition = new Vector2(groundPosition.x, 0f);
             transform.position = meSlime.position;
             mGrounded = true;
@@ -116,7 +121,8 @@ public class SlimeAgent : Agent
         }
 
         meSlime.velocity = new Vector2(vx, vy);
-        
+        Debug.LogFormat("2 Agent {0} y: {1}", player, groundPosition.y);
+
     }
 
     public override void AgentReset() {
@@ -130,7 +136,7 @@ public class SlimeAgent : Agent
     // convert the observation to have the agent on the left always
     public override void CollectObservations()
     {
-        bool invertX = (player == 2);
+        bool invertX = (player == Player.Two);
 
         if (invertX) {
             /*if (gameManager.GameID == 0) Debug.LogFormat("Agent {0} observe ({1}, {2}, {3})", 
@@ -168,7 +174,7 @@ public class SlimeAgent : Agent
 
     public void CollectObservationsRaw()
     {
-        bool invertX = (player == 2);
+        bool invertX = (player == Player.Two);
 
         if (invertX)
         {
@@ -212,7 +218,6 @@ public class SlimeAgent : Agent
     {
         // Actions, size = 2
         //Debug.LogFormat("Agent {0} action: {0}, {1}", vectorAction[0], vectorAction[1]);
-        // TODO apply action to slime
         SetAction((int)vectorAction[0], (int)vectorAction[1]);
         AddReward(-0.001f);
 

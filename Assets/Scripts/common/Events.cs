@@ -21,6 +21,12 @@ public class Events : MonoBehaviour {
     }
 
     public void RaiseEventImmediate(string eventName, params object[] eventParams) {
+        Debug.LogFormat("events: {0} {1}", eventName, gEvent == null);
+        if (gEvent == null)
+        {
+            Debug.LogFormat("we are gEvents? {0}", Events.gInstance == this);
+        }
+        
         gEvent(eventName, eventParams);
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3817274694441913310}
   - component: {fileID: 3817274694441913309}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: EnvironmentAgents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ PrefabInstance:
     - target: {fileID: 506231960452910692, guid: 1fdbdd25842e91200a960dceed93c988,
         type: 3}
       propertyPath: m_Name
-      value: slimeAI1
+      value: slime1
       objectReference: {fileID: 0}
     - target: {fileID: 506231960452910698, guid: 1fdbdd25842e91200a960dceed93c988,
         type: 3}
@@ -401,7 +401,7 @@ PrefabInstance:
     - target: {fileID: 506231960452910692, guid: 1fdbdd25842e91200a960dceed93c988,
         type: 3}
       propertyPath: m_Name
-      value: slimeAI2
+      value: slime2
       objectReference: {fileID: 0}
     - target: {fileID: 506231960452910698, guid: 1fdbdd25842e91200a960dceed93c988,
         type: 3}
